@@ -1,0 +1,21 @@
+function circleOfNumbers(n, firstNumber) {
+    /*the half value shows us how many steps
+     * we need to take in order to reach the
+     * desired location
+    */
+    var count = n/2;
+    var partner = firstNumber;
+    
+    //loop moves step to step untill the desired location
+    while(count!=0){
+        count--;
+        //once a value reaches the maximum point
+        //it begins again a fresh the count whisc is at zero
+        if(partner == (n-1)){
+            partner = 0;
+        }else{
+            partner++;
+        }
+    }
+    return partner;
+}
